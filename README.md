@@ -28,13 +28,7 @@ Average cleared rows over 1000 games: 5.08
     
 After fixing these bugs, I wondered: there doesn't seem to be any obvious bugs, so maybe its something the is obvious, but maybe harder to notice. I looked at the row counting and score counting code, and it all seemed correct.
 
-After playing for some time, I thought, what if the logic behind random pieces is incorrect? It should have the bag with 4 pieces of each type, and until the bag is empty, choose from it randomly. But I got the followig configuration:
-
-
-
-![Uploading Screenshot 2025-11-12 222021.png…]()
-
-
+After playing for some time, I thought, what if the logic behind random pieces is incorrect? It should have the bag with 4 pieces of each type, and until the bag is empty, choose from it randomly. But I got the followig configuration: I have added the screenshot to repo.
 
 (notice no rows cleared, so this is the first bag). We can see that the Hero type (look up the names of the tetris blocks) occurs three times, but we have 8 TeeWee type (also, to have 8 odds for this is really low). So, I fixed the function and used randomChoice():
 
